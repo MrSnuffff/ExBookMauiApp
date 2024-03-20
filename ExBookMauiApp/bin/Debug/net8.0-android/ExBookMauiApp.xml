@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ExBookMauiApp</name>
+    </assembly>
+    <members>
+        <member name="T:ExBookMauiApp.Resources.Strings.AppResources">
+            <summary>
+              Класс ресурса со строгой типизацией для поиска локализованных строк и т.д.
+            </summary>
+        </member>
+        <member name="P:ExBookMauiApp.Resources.Strings.AppResources.ResourceManager">
+            <summary>
+              Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
+            </summary>
+        </member>
+        <member name="P:ExBookMauiApp.Resources.Strings.AppResources.Culture">
+            <summary>
+              Перезаписывает свойство CurrentUICulture текущего потока для всех
+              обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
+            </summary>
+        </member>
+        <member name="P:ExBookMauiApp.Resources.Strings.AppResources.AddBook">
+            <summary>
+              Ищет локализованную строку, похожую на Add.
+            </summary>
+        </member>
+        <member name="P:ExBookMauiApp.Resources.Strings.AppResources.ConfirmPassword">
+            <summary>
+              Ищет локализованную строку, похожую на Confirm Password.
+            </summary>
+        </member>
+        <member name="P:ExBookMauiApp.Resources.Strings.AppResources.CreateAnAccount">
+            <summary>
+              Ищет локализованную строку, похожую на Create an account.
+            </summary>
+        </member>
+        <member name="P:ExBookMauiApp.Resources.Strings.AppResources.EmailorPhoneNumber">
+            <summary>
+              Ищет локализованную строку, похожую на Email or Phone Number.
+            </summary>
+        </member>
+        <member name="P:ExBookMauiApp.Resources.Strings.AppResources.ForgotPassword">
+            <summary>
+              Ищет локализованную строку, похожую на Forgot Password?.
+            </summary>
+        </member>
+        <member name="P:ExBookMauiApp.Resources.Strings.AppResources.Home">
+            <summary>
+              Ищет локализованную строку, похожую на Home.
+            </summary>
+        </member>
+        <member name="P:ExBookMauiApp.Resources.Strings.AppResources.Name">
+            <summary>
+              Ищет локализованную строку, похожую на  Name.
+            </summary>
+        </member>
+        <member name="P:ExBookMauiApp.Resources.Strings.AppResources.NotAllFieldsAreEntered">
+            <summary>
+              Ищет локализованную строку, похожую на Not all fields are entered.
+            </summary>
+        </member>
+        <member name="P:ExBookMauiApp.Resources.Strings.AppResources.NotRegistred">
+            <summary>
+              Ищет локализованную строку, похожую на Not Registred?.
+            </summary>
+        </member>
+        <member name="P:ExBookMauiApp.Resources.Strings.AppResources.Password">
+            <summary>
+              Ищет локализованную строку, похожую на  Password.
+            </summary>
+        </member>
+        <member name="P:ExBookMauiApp.Resources.Strings.AppResources.PasswordIncorrect">
+            <summary>
+              Ищет локализованную строку, похожую на Password incorrect.
+            </summary>
+        </member>
+        <member name="P:ExBookMauiApp.Resources.Strings.AppResources.Profile">
+            <summary>
+              Ищет локализованную строку, похожую на Profile.
+            </summary>
+        </member>
+        <member name="P:ExBookMauiApp.Resources.Strings.AppResources.Registration">
+            <summary>
+              Ищет локализованную строку, похожую на Registration.
+            </summary>
+        </member>
+        <member name="P:ExBookMauiApp.Resources.Strings.AppResources.Search">
+            <summary>
+              Ищет локализованную строку, похожую на Search.
+            </summary>
+        </member>
+        <member name="P:ExBookMauiApp.Resources.Strings.AppResources.SelectYourCountry">
+            <summary>
+              Ищет локализованную строку, похожую на Select your country.
+            </summary>
+        </member>
+        <member name="P:ExBookMauiApp.Resources.Strings.AppResources.SignIn">
+            <summary>
+              Ищет локализованную строку, похожую на Sign in.
+            </summary>
+        </member>
+        <member name="P:ExBookMauiApp.Resources.Strings.AppResources.SignInToYourAccount">
+            <summary>
+              Ищет локализованную строку, похожую на Sign-in to your Account.
+            </summary>
+        </member>
+        <member name="P:ExBookMauiApp.Resources.Strings.AppResources.SignUp">
+            <summary>
+              Ищет локализованную строку, похожую на Sign up.
+            </summary>
+        </member>
+        <member name="P:ExBookMauiApp.Resources.Strings.AppResources.Tabs">
+            <summary>
+              Ищет локализованную строку, похожую на Tabs.
+            </summary>
+        </member>
+        <member name="P:ExBookMauiApp.Resources.Strings.AppResources.WelcomeBack">
+            <summary>
+              Ищет локализованную строку, похожую на Welcome Back.
+            </summary>
+        </member>
+        <member name="P:ExBookMauiApp.Resources.Strings.AppResources.WrongPasswordOrUserName">
+            <summary>
+              Ищет локализованную строку, похожую на Wrong password or username.
+            </summary>
+        </member>
+    </members>
+</doc>

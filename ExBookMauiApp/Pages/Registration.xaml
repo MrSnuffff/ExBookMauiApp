@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExBookMauiApp.Pages.Registration"
+             
+             Shell.TabBarIsVisible="False">
+            
+    <VerticalStackLayout>
+        <StackLayout x:Name="UsernameEmailLayout">
+            <Label Text="Create your account" TextColor ="Black" FontSize="25" HorizontalOptions="Center" FontAttributes="Bold" ></Label>
+            <Label Margin="43,30,0,0" Text="Username" FontAttributes="Bold"></Label>
+            <Frame CornerRadius="30"  Padding="3"  Margin="0,3,0,3" WidthRequest="350" BackgroundColor="#faf4e6">
+                <Entry x:Name="username" Placeholder="Pick a username" Margin="15,0,15,0" BackgroundColor="#faf4e6"></Entry>
+            </Frame>
+            <Label Margin="43,9,0,0" Text="Email" FontAttributes="Bold"></Label>
+            <Frame CornerRadius="30"  Padding="3"  Margin="0,3,0,3" WidthRequest="350" BackgroundColor="#faf4e6">
+                <Entry x:Name="email" Placeholder="you@example.com" Margin="15,0,15,0" BackgroundColor="#faf4e6"></Entry>
+            </Frame>
+            <Button Clicked="UsernameEmailNextButton" Text="Next" Margin="0,25,0,0" WidthRequest="350" BackgroundColor="#F59926" CornerRadius="25" TextColor="Black" VerticalOptions="EndAndExpand"></Button>
+            
+        </StackLayout>
+
+        <StackLayout x:Name="LastFirstNameLayout">
+            <Label Text="What's your name?" TextColor ="Black" FontSize="25" HorizontalOptions="Center" FontAttributes="Bold" ></Label>
+            <Label Margin="43,30,0,0" Text="Last name" FontAttributes="Bold"></Label>
+            <Frame CornerRadius="30"  Padding="3"  Margin="0,3,0,3" WidthRequest="350" BackgroundColor="#faf4e6">
+                <Entry x:Name="lastname" Margin="15,0,15,0" BackgroundColor="#faf4e6"></Entry>
+            </Frame>
+            <Label Margin="43,9,0,0" Text="First name" FontAttributes="Bold"></Label>
+            <Frame CornerRadius="30"  Padding="3"  Margin="0,3,0,3" WidthRequest="350" BackgroundColor="#faf4e6">
+                <Entry x:Name="firstname" Margin="15,0,15,0" BackgroundColor="#faf4e6"></Entry>
+            </Frame>
+            <Button Clicked="LastFirstNameNextButton" Text="Next" Margin="0,25,0,0" WidthRequest="350" BackgroundColor="#F59926"  CornerRadius="25" TextColor="Black" VerticalOptions="EndAndExpand"></Button>
+            <Button Clicked="LastFirstNameBackButton" Text="Back" Margin="0,15,0,0" WidthRequest="350" BorderColor="#F59926" BorderWidth="2" BackgroundColor="White" CornerRadius="25" TextColor="Black" VerticalOptions="EndAndExpand"></Button>
+
+        </StackLayout>
+        
+        <StackLayout x:Name="PhoneNumberLayout">
+            <Label Text="What's your phone number?" TextColor ="Black" FontSize="25" HorizontalOptions="Center" FontAttributes="Bold" ></Label>
+            <Frame CornerRadius="30"  Padding="3"  Margin="0,20,0,3" WidthRequest="350" BackgroundColor="#faf4e6">
+                <Entry x:Name="phonenumber" Margin="15,0,15,0" BackgroundColor="#faf4e6" Keyboard="Telephone"></Entry>
+            </Frame>
+            <Button Clicked="PhoneNumberNextButton" Text="Next" Margin="0,25,0,0" WidthRequest="350" BackgroundColor="#F59926"  CornerRadius="25" TextColor="Black" VerticalOptions="EndAndExpand"></Button>
+            <Button Clicked="PhoneNumberBackButton" Text="Back" Margin="0,15,0,0" WidthRequest="350" BorderColor="#F59926" BorderWidth="2" BackgroundColor="White" CornerRadius="25" TextColor="Black" VerticalOptions="EndAndExpand"></Button>
+
+        </StackLayout>
+        
+        
+        <StackLayout x:Name="PasswordLayout">
+            <Label Text="Create a password" TextColor ="Black" FontSize="25" HorizontalOptions="Center" FontAttributes="Bold" ></Label>
+            <Label Margin="43,20,43,20" Text="Use 8 or more characters with a mix of letters, numbers, symbols" HorizontalOptions="Center" ></Label>
+            <Frame CornerRadius="30"  Padding="3"  Margin="0,0,0,5" WidthRequest="350" BackgroundColor="#faf4e6">
+                <Entry x:Name="password" Placeholder="Password" Margin="15,0,15,0" BackgroundColor="#faf4e6"></Entry>
+            </Frame>
+           
+            <Frame CornerRadius="30"  Padding="3"  Margin="0,5,0,3" WidthRequest="350" BackgroundColor="#faf4e6">
+                <Entry x:Name="confirmpassword" Placeholder="Confirm password" Margin="15,0,15,0" BackgroundColor="#faf4e6"></Entry>
+            </Frame>
+            <Button Clicked="PasswordNextButton" Text="Next" Margin="0,25,0,0" WidthRequest="350" BackgroundColor="#F59926"  CornerRadius="25" TextColor="Black" VerticalOptions="EndAndExpand"></Button>
+            <Button Clicked="PasswordBackButton" Text="Back" Margin="0,15,0,0" WidthRequest="350" BorderColor="#F59926" BorderWidth="2" BackgroundColor="White" CornerRadius="25" TextColor="Black" VerticalOptions="EndAndExpand"></Button>
+
+        </StackLayout>
+        
+        
+    </VerticalStackLayout>
+</ContentPage>

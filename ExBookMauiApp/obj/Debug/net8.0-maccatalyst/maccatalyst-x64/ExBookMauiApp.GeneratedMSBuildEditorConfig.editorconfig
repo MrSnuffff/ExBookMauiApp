@@ -1,0 +1,89 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0-maccatalyst
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ExBookMauiApp
+build_property.ProjectDir = C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+
+[C:/Users/GURGEN/source/repos/ExBookMauiApp/ExBookMauiApp/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ExBookMauiApp.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/GURGEN/source/repos/ExBookMauiApp/ExBookMauiApp/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ExBookMauiApp.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/GURGEN/source/repos/ExBookMauiApp/ExBookMauiApp/Pages/AddBook.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ExBookMauiApp.Pages.AddBook.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\AddBook.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\AddBook.xaml
+
+[C:/Users/GURGEN/source/repos/ExBookMauiApp/ExBookMauiApp/Pages/Authorization.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ExBookMauiApp.Pages.Authorization.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Authorization.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Authorization.xaml
+
+[C:/Users/GURGEN/source/repos/ExBookMauiApp/ExBookMauiApp/Pages/Home.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ExBookMauiApp.Pages.Home.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Home.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Home.xaml
+
+[C:/Users/GURGEN/source/repos/ExBookMauiApp/ExBookMauiApp/Pages/Profile.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ExBookMauiApp.Pages.Profile.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Profile.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Profile.xaml
+
+[C:/Users/GURGEN/source/repos/ExBookMauiApp/ExBookMauiApp/Pages/Registration.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ExBookMauiApp.Pages.Registration.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Registration.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Registration.xaml
+
+[C:/Users/GURGEN/source/repos/ExBookMauiApp/ExBookMauiApp/Pages/Search.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ExBookMauiApp.Pages.Search.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Search.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Search.xaml
+
+[C:/Users/GURGEN/source/repos/ExBookMauiApp/ExBookMauiApp/Pages/Settings.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ExBookMauiApp.Pages.Settings.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Settings.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Settings.xaml
+
+[C:/Users/GURGEN/source/repos/ExBookMauiApp/ExBookMauiApp/Pages/Tabs.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ExBookMauiApp.Pages.Tabs.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Tabs.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Tabs.xaml
+
+[C:/Users/GURGEN/source/repos/ExBookMauiApp/ExBookMauiApp/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ExBookMauiApp.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/GURGEN/source/repos/ExBookMauiApp/ExBookMauiApp/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ExBookMauiApp.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml

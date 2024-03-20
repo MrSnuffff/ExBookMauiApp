@@ -1,0 +1,1 @@
+C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\ExBookMauiApp.csproj;x64

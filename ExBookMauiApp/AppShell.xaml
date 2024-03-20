@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ExBookMauiApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:localPages="clr-namespace:ExBookMauiApp.Pages"
+    Shell.FlyoutBehavior="Disabled"
+    Title="ExBookMaui"
+    TitleColor="Black"
+    DisabledColor="Gray"
+    UnselectedColor="#95FFFFFF"
+    xmlns:strings="clr-namespace:ExBookMauiApp.Resources.Strings"
+    >
+
+    <TabBar Route="pages">
+        <ShellContent Title="{x:Static strings:AppResources.Home}" Icon="home.png" ContentTemplate="{DataTemplate localPages:Home}" Route="Home"/>
+        <ShellContent Title="{x:Static strings:AppResources.Search}" Icon="search.png" ContentTemplate="{DataTemplate localPages:Search}" Route="Search"/>
+        <ShellContent Title="{x:Static strings:AppResources.AddBook}" Icon="add.png" ContentTemplate="{DataTemplate localPages:AddBook}" Route="AddBook"/>
+        <ShellContent Title="{x:Static strings:AppResources.Tabs}" Icon="tabs.png" ContentTemplate="{DataTemplate localPages:Tabs}" Route="Tabs"/>
+        <ShellContent Title="{x:Static strings:AppResources.Profile}" Icon="user.png" ContentTemplate="{DataTemplate localPages:Profile}" Route="Profile"/>
+    </TabBar>
+
+    
+</Shell>
