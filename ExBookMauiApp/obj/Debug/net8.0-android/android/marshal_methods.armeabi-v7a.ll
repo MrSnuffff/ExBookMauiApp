@@ -13,7 +13,7 @@ target triple = "armv7-unknown-linux-android21"
 	ptr ; MonoClass klass
 }
 
-@assembly_image_cache = dso_local local_unnamed_addr global [310 x ptr] zeroinitializer, align 4
+@assembly_image_cache = dso_local local_unnamed_addr global [307 x ptr] zeroinitializer, align 4
 
 ; Each entry maps hash of an assembly name to an index into the `assembly_image_cache` array
 @assembly_image_cache_hashes = dso_local local_unnamed_addr constant [614 x i32] [

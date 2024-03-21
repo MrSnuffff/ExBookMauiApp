@@ -11,15 +11,15 @@ namespace ExBookMauiApp
            
 
         }
-        protected  bool OnBackButtonPressed(ShellNavigatingEventArgs args)
-        {
-            base.OnNavigating(args);
+        //protected  bool OnBackButtonPressed(ShellNavigatingEventArgs args)
+        //{
+        //    base.OnNavigating(args);
 
-            ShellNavigatingDeferral token = args.GetDeferral();
-            args.Cancel();
-            token.Complete();
-            return true;
-        }
+        //    ShellNavigatingDeferral token = args.GetDeferral();
+        //    args.Cancel();
+        //    token.Complete();
+        //    return true;
+        //}
         
     }
 }

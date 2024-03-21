@@ -9,8 +9,7 @@
     TitleColor="Black"
     DisabledColor="Gray"
     UnselectedColor="#95FFFFFF"
-    xmlns:strings="clr-namespace:ExBookMauiApp.Resources.Strings"
-    >
+    xmlns:strings="clr-namespace:ExBookMauiApp.Resources.Strings">
 
     <TabBar Route="pages">
         <ShellContent Title="{x:Static strings:AppResources.Home}" Icon="home.png" ContentTemplate="{DataTemplate localPages:Home}" Route="Home"/>
@@ -19,6 +18,4 @@
         <ShellContent Title="{x:Static strings:AppResources.Tabs}" Icon="tabs.png" ContentTemplate="{DataTemplate localPages:Tabs}" Route="Tabs"/>
         <ShellContent Title="{x:Static strings:AppResources.Profile}" Icon="user.png" ContentTemplate="{DataTemplate localPages:Profile}" Route="Profile"/>
     </TabBar>
-
-    
 </Shell>

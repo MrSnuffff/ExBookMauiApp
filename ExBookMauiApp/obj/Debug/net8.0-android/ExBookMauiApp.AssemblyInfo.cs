@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ExBookMauiApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+51bcfe2039a06dd115887b9bdd4b89162a73f5f4")]
 [assembly: System.Reflection.AssemblyProductAttribute("ExBookMauiApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ExBookMauiApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
