@@ -34,6 +34,8 @@
                             <TapGestureRecognizer Tapped="CreateAnAccount_Clicked" />
                         </Label.GestureRecognizers>
                     </Label>
+                    
+                    
                     <!--<Button Text="{x:Static strings:AppResources.CreateAnAccount}" Clicked="CreateAnAccount_Clicked" TextColor="Blue" BackgroundColor="White" Padding="7,-5" HeightRequest="10" ></Button>-->
                 </StackLayout>
             </StackLayout>
