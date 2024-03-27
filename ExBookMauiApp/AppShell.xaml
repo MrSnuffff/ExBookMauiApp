@@ -9,6 +9,7 @@
     TitleColor="Black"
     DisabledColor="Gray"
     UnselectedColor="#95FFFFFF"
+    ForegroundColor="Black" 
     xmlns:strings="clr-namespace:ExBookMauiApp.Resources.Strings">
 
     <TabBar Route="pages">

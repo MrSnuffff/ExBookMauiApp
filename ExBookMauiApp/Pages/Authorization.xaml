@@ -25,18 +25,12 @@
                         <TapGestureRecognizer Tapped="ForgotPassword_Clicked" />
                     </Label.GestureRecognizers>
                 </Label>
+                <Label Margin="43, 0, 43, 0" x:Name="ErrorLabel"  TextColor="Red"></Label>
                 <Button Clicked="SignIn_Clicked" Text="{x:Static strings:AppResources.SignIn}" Margin="5" WidthRequest="350" BackgroundColor="#F59926" CornerRadius="25" TextColor="Black" VerticalOptions="EndAndExpand"></Button>
                 
                 <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
                     <Label Text="{x:Static strings:AppResources.NotRegistred}"></Label>
-                    <Label Text="{x:Static strings:AppResources.CreateAnAccount}" TextColor="CadetBlue" TextDecorations="Underline" >
-                        <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="CreateAnAccount_Clicked" />
-                        </Label.GestureRecognizers>
-                    </Label>
-                    
-                    
-                    <!--<Button Text="{x:Static strings:AppResources.CreateAnAccount}" Clicked="CreateAnAccount_Clicked" TextColor="Blue" BackgroundColor="White" Padding="7,-5" HeightRequest="10" ></Button>-->
+                    <Button Text="{x:Static strings:AppResources.CreateAnAccount}" Clicked="CreateAnAccount_Clicked" TextColor="Blue" BackgroundColor="White" Padding="7,-5" HeightRequest="10" ></Button>
                 </StackLayout>
             </StackLayout>
         </VerticalStackLayout>

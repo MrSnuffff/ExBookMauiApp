@@ -151,7 +151,6 @@ C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\obj\Debug\net8.0-window
 C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png
 C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\home.scale-100.png
 C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\search.scale-100.png
-C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\signin.scale-100.jpg
 C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\tabs.scale-100.png
 C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\user.scale-100.png
 C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauiimage.stamp
@@ -183,3 +182,5 @@ C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\obj\Debug\net8.0-window
 C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
+C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\authhorization.scale-100.png
+C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\sign.scale-100.jpg

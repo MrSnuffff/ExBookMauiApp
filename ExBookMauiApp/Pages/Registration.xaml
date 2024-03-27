@@ -2,20 +2,22 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ExBookMauiApp.Pages.Registration"
-             
              Shell.TabBarIsVisible="False">
-            
+    
     <VerticalStackLayout>
         <StackLayout x:Name="UsernameEmailLayout">
+            <Image Source="registration.png"></Image>
             <Label Text="Create your account" TextColor ="Black" FontSize="25" HorizontalOptions="Center" FontAttributes="Bold" ></Label>
             <Label Margin="43,30,0,0" Text="Username" FontAttributes="Bold"></Label>
             <Frame CornerRadius="30"  Padding="3"  Margin="0,3,0,3" WidthRequest="350" BackgroundColor="#faf4e6">
                 <Entry x:Name="username" Placeholder="Pick a username" Margin="15,0,15,0" BackgroundColor="#faf4e6"></Entry>
             </Frame>
+            
             <Label Margin="43,9,0,0" Text="Email" FontAttributes="Bold"></Label>
             <Frame CornerRadius="30"  Padding="3"  Margin="0,3,0,3" WidthRequest="350" BackgroundColor="#faf4e6">
-                <Entry x:Name="email" Placeholder="you@example.com" Margin="15,0,15,0" BackgroundColor="#faf4e6"></Entry>
+                <Entry x:Name="emailEntry" Placeholder="you@example.com" Margin="15,0,15,0" BackgroundColor="#faf4e6"></Entry>
             </Frame>
+            <Label Margin="43, 0, 43, 0" x:Name="ErrorLabel" IsVisible="false" Text="A person with this name or email already exists" TextColor="Red"></Label>
             <Button Clicked="UsernameEmailNextButton" Text="Next" Margin="0,25,0,0" WidthRequest="350" BackgroundColor="#F59926" CornerRadius="25" TextColor="Black" VerticalOptions="EndAndExpand"></Button>
             
         </StackLayout>
@@ -56,11 +58,24 @@
             <Frame CornerRadius="30"  Padding="3"  Margin="0,5,0,3" WidthRequest="350" BackgroundColor="#faf4e6">
                 <Entry x:Name="confirmpassword" Placeholder="Confirm password" Margin="15,0,15,0" BackgroundColor="#faf4e6"></Entry>
             </Frame>
-            <Button Clicked="PasswordNextButton" Text="Next" Margin="0,25,0,0" WidthRequest="350" BackgroundColor="#F59926"  CornerRadius="25" TextColor="Black" VerticalOptions="EndAndExpand"></Button>
+            <Button Clicked="PasswordNextButton" x:Name="PasswordNextButtonName" Text="Next" Margin="0,25,0,0" WidthRequest="350" BackgroundColor="#F59926"  CornerRadius="25" TextColor="Black" VerticalOptions="EndAndExpand"></Button>
             <Button Clicked="PasswordBackButton" Text="Back" Margin="0,15,0,0" WidthRequest="350" BorderColor="#F59926" BorderWidth="2" BackgroundColor="White" CornerRadius="25" TextColor="Black" VerticalOptions="EndAndExpand"></Button>
 
         </StackLayout>
-        
-        
+
+        <StackLayout x:Name="SendEmailLayout">
+            <Label Text="Please confirm your email" TextColor ="Black" FontSize="25" HorizontalOptions="Center" FontAttributes="Bold" ></Label>
+            <Image Source="email.jfif"></Image>
+            <Label Margin="50,20,40,20" Text="We have sent a letter with a confirmation code to your email." HorizontalOptions="Center" ></Label>
+            <Frame CornerRadius="30"  Padding="3"  Margin="0,5,0,3" WidthRequest="350" BackgroundColor="#faf4e6">
+                <Entry x:Name="confirmCode" Placeholder="Confirm password" Margin="15,0,15,0" BackgroundColor="#faf4e6"></Entry>
+            </Frame>
+            <StackLayout  HorizontalOptions="Center" Orientation="Horizontal">
+                <Label Text="Code expires in: " />
+                <Label x:Name="timerLabel" />
+            </StackLayout>
+            <Button Clicked="ConfirmEmailButton" Text="Confirm" Margin="5,25,5,0" WidthRequest="350" BackgroundColor="#F59926"  CornerRadius="25" TextColor="Black" VerticalOptions="Center"></Button>
+            <Button Clicked="ResendVerifyCode" Text="Resend code" TextColor="Black" FontAttributes="Bold" FontSize="Body" BackgroundColor="White"></Button>
+        </StackLayout>
     </VerticalStackLayout>
 </ContentPage>

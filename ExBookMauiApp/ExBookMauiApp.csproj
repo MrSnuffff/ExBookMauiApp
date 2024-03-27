@@ -58,13 +58,16 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\Authhorization.png" />
-	  <None Remove="Resources\Images\Sign.jpg" />
+	  <None Remove="Resources\Images\email.jfif" />
+	  <None Remove="Resources\Images\registr.png" />
+	  <None Remove="Resources\Images\registration.jpg" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 	</ItemGroup>
 
 	<ItemGroup>

@@ -19,7 +19,7 @@
     <WindowsSdkPath>
     </WindowsSdkPath>
     <LayoutDir>C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
-    <RegisteredManifestChecksum>272F3D5F95F0A1B21070BC6E273D63AAC35C2FE73FAE1E5B507CA906E68C13A6</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>3C0A44E8E0CBCAAE8173CEFEEE62221F078870BB37EAF719A5B685C36B2EF056</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>com.companyname.exbookmauiapp_1.0.0.1_x64__9zz4h110yvjzm</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>com.companyname.exbookmauiapp_9zz4h110yvjzm!App</RegisteredUserModeAppID>
     <RegisteredPackageID>com.companyname.exbookmauiapp</RegisteredPackageID>
@@ -30,25 +30,25 @@
     <AppXManifest Include="C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-02-25T08:31:47.351</Modified>
+      <Modified>2024-03-24T04:44:38.410</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-02-25T08:30:52.705</Modified>
+      <Modified>2024-03-24T04:44:38.077</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ExBookMauiApp.runtimeconfig.json">
       <PackagePath>ExBookMauiApp.runtimeconfig.json</PackagePath>
-      <Modified>2024-02-25T07:52:58.469</Modified>
+      <Modified>2024-03-21T17:43:35.103</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ExBookMauiApp.dll">
       <PackagePath>ExBookMauiApp.dll</PackagePath>
-      <Modified>2024-02-25T08:31:46.573</Modified>
+      <Modified>2024-03-24T04:44:35.999</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>ExBookMauiApp.exe</PackagePath>
-      <Modified>2024-02-25T08:31:46.662</Modified>
+      <Modified>2024-03-24T04:44:36.095</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -270,25 +270,29 @@
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
       <Modified>2024-02-25T07:47:34.563</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\authhorization.scale-100.png">
+      <PackagePath>authhorization.scale-100.png</PackagePath>
+      <Modified>2024-03-17T17:15:25.083</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2024-02-25T07:52:07.583</Modified>
+      <Modified>2024-03-17T17:17:38.468</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2024-02-25T07:52:07.599</Modified>
+      <Modified>2024-03-17T17:17:38.484</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2024-02-25T07:52:07.615</Modified>
+      <Modified>2024-03-17T17:17:38.499</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2024-02-25T07:52:07.646</Modified>
+      <Modified>2024-03-17T17:17:38.531</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2024-02-25T07:52:07.740</Modified>
+      <Modified>2024-03-17T17:17:38.624</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\home.scale-100.png">
       <PackagePath>home.scale-100.png</PackagePath>
@@ -298,9 +302,9 @@
       <PackagePath>search.scale-100.png</PackagePath>
       <Modified>2023-12-16T18:21:12.471</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\signin.scale-100.jpg">
-      <PackagePath>signin.scale-100.jpg</PackagePath>
-      <Modified>2021-01-31T10:54:58.000</Modified>
+    <AppxPackagedFile Include="C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\sign.scale-100.jpg">
+      <PackagePath>sign.scale-100.jpg</PackagePath>
+      <Modified>2024-03-02T06:00:01.831</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\tabs.scale-100.png">
       <PackagePath>tabs.scale-100.png</PackagePath>
@@ -312,7 +316,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ExBookMauiApp.deps.json">
       <PackagePath>ExBookMauiApp.deps.json</PackagePath>
-      <Modified>2024-02-25T08:30:52.278</Modified>
+      <Modified>2024-03-24T04:44:37.560</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\GURGEN\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>

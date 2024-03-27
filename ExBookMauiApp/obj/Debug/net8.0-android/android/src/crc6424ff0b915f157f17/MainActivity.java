@@ -10,6 +10,7 @@ public class MainActivity
 	public static final String __md_methods;
 	static {
 		__md_methods = 
+			"n_onKeyDown:(ILandroid/view/KeyEvent;)Z:GetOnKeyDown_ILandroid_view_KeyEvent_Handler\n" +
 			"";
 		mono.android.Runtime.register ("ExBookMauiApp.MainActivity, ExBookMauiApp", MainActivity.class, __md_methods);
 	}
@@ -31,6 +32,14 @@ public class MainActivity
 			mono.android.TypeManager.Activate ("ExBookMauiApp.MainActivity, ExBookMauiApp", "System.Int32, System.Private.CoreLib", this, new java.lang.Object[] { p0 });
 		}
 	}
+
+
+	public boolean onKeyDown (int p0, android.view.KeyEvent p1)
+	{
+		return n_onKeyDown (p0, p1);
+	}
+
+	private native boolean n_onKeyDown (int p0, android.view.KeyEvent p1);
 
 	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)
