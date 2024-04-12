@@ -47,7 +47,6 @@
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
-		<MauiImage Update="Resources\Images\dotnet_bot.png" Resize="True" BaseSize="300,185" />
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
@@ -58,9 +57,14 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\Authhorization.png" />
+	  <None Remove="Resources\Images\book.png" />
+	  <None Remove="Resources\Images\bussinesssecrets.jfif" />
+	  <None Remove="Resources\Images\chat.png" />
+	  <None Remove="Resources\Images\coin.png" />
 	  <None Remove="Resources\Images\email.jfif" />
-	  <None Remove="Resources\Images\registr.png" />
+	  <None Remove="Resources\Images\profile.png" />
 	  <None Remove="Resources\Images\registration.jpg" />
+	  <None Remove="Resources\Images\richdadpoordad.jpg" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -95,6 +99,9 @@
 	  <MauiXaml Update="Pages\Authorization.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Pages\Chat.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\Home.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -110,9 +117,13 @@
 	  <MauiXaml Update="Pages\Settings.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\Tabs.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="Resources\AppIcon\appiconfg.svg" />
+	  <MauiImage Include="Resources\Images\NewFolder\bussinesssecrets.jfif" />
+	  <MauiImage Include="Resources\Images\NewFolder\grokaemalgoritmi.jpg" />
+	  <MauiImage Include="Resources\Images\NewFolder\richdadpoordad.jpg" />
 	</ItemGroup>
 
 </Project>

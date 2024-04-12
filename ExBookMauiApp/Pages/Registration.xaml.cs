@@ -1,6 +1,5 @@
 using ExBookMauiApp.Models.UserModels;
-using Newtonsoft.Json.Linq;
-using System.Text;
+using ExBookMauiApp.HttpRequests;
 
 namespace ExBookMauiApp.Pages;
 
@@ -99,61 +98,51 @@ public partial class Registration : ContentPage
             confirmpassword.Placeholder = "Confirm password is required";
             confirmpassword.PlaceholderColor = Colors.Red;
         }
-        if (!string.IsNullOrEmpty(lastname.Text) && !string.IsNullOrEmpty(firstname.Text))
+        if (password.Text == confirmpassword.Text && !string.IsNullOrEmpty(firstname.Text))
         {
-            if(password.Text == confirmpassword.Text)
+            PasswordNextButtonName.IsEnabled = false;
+            RegistrationModel registrationModel = new RegistrationModel()
             {
-                PasswordNextButtonName.IsEnabled = false;
-                RegistrationModel registrationModel = new RegistrationModel()
-                {
-                    username = username.Text,
-                    first_name = firstname.Text,
-                    last_name = lastname.Text,
-                    email = emailEntry.Text,
-                    phone_number = phonenumber.Text,
-                    passwordHash = password.Text
-                };
-                bool succsesLogin = await RegistrationRequestAsync(registrationModel);
-                if (succsesLogin)
-                {
-                    PasswordLayout.IsVisible = false;
-                    SendEmailLayout.IsVisible = true;
-                    StartTimer();
-                }
-                else
-                {
-                    PasswordLayout.IsVisible = false;
-                    UsernameEmailLayout.IsVisible = true;
-                    ErrorLabel.IsVisible = true;
-                }
+                username = username.Text,
+                first_name = firstname.Text,
+                last_name = lastname.Text,
+                email = emailEntry.Text,
+                phone_number = phonenumber.Text,
+                passwordHash = password.Text
+            };
+
+            bool succsesLogin = await AuthorizationRequests.RegistrationRequestAsync(registrationModel);
+            if (succsesLogin)
+            {
+                EmailModel email = new EmailModel { email = emailEntry.Text };
+
+                await AuthorizationRequests.SendVerifyCode(email);
+
+                remainingTimeInSeconds = 300;
+                PasswordLayout.IsVisible = false;
+                SendEmailLayout.IsVisible = true;
+                StartTimer();
+            }
+            else
+            {
+                PasswordLayout.IsVisible = false;
+                UsernameEmailLayout.IsVisible = true;
+                ErrorLabel.IsVisible = true;
             }
         }
     }
-    public async Task<bool> RegistrationRequestAsync(RegistrationModel registrationModel)
-    {
-        string jsonData = Newtonsoft.Json.JsonConvert.SerializeObject(registrationModel);
-        byte[] contentBytes = Encoding.UTF8.GetBytes(jsonData);
-        HttpContent content = new ByteArrayContent(contentBytes);
-        content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-
-        HttpResponseMessage response = await App.httpClient.PostAsync("api/Users/Registration", content);
-        if (response.IsSuccessStatusCode)
-        {
-            EmailModel email = new EmailModel{ email = emailEntry.Text };
-            await SendVerifyCode(email);
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
+    
     public async void ConfirmEmailButton(object sender, EventArgs e)
     {
         ConfirmEmail confirmEmail = new ConfirmEmail { email = emailEntry.Text, confirmCode = confirmCode.Text };
-        bool succsesLogin = await SendCheckVerifyCode(confirmEmail);
-        if (succsesLogin)
+        string accessToken, refreshToken;
+        (accessToken, refreshToken) = await AuthorizationRequests.CheckVerifyCode(confirmEmail);
+        if (accessToken != null && refreshToken != null)
+        {
+            await SecureStorage.SetAsync("accessToken", accessToken);
+            await SecureStorage.SetAsync("refreshToken", refreshToken);
             await Shell.Current.GoToAsync("//pages/Home");
+        }
         else
         {
             confirmCode.Text = "";
@@ -161,44 +150,12 @@ public partial class Registration : ContentPage
             confirmCode.PlaceholderColor = Colors.Red;
         }
     }
-    public async Task SendVerifyCode(EmailModel email)
-    {
-        remainingTimeInSeconds = 300;
-        string jsonData = Newtonsoft.Json.JsonConvert.SerializeObject(email);
-        byte[] contentBytes = Encoding.UTF8.GetBytes(jsonData);
-        HttpContent content = new ByteArrayContent(contentBytes);
-        content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-
-        HttpResponseMessage response = await App.httpClient.PostAsync("api/Users/SendVerifyCode", content);
-    }
-    public async Task<bool> SendCheckVerifyCode(ConfirmEmail confirmEmail)
-    {
-        string jsonData = Newtonsoft.Json.JsonConvert.SerializeObject(confirmEmail);
-        byte[] contentBytes = Encoding.UTF8.GetBytes(jsonData);
-        HttpContent content = new ByteArrayContent(contentBytes);
-        content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-
-        HttpResponseMessage response = await App.httpClient.PostAsync("api/Users/CheckVerifyCode", content);
-        if (response.IsSuccessStatusCode)
-        {
-            string responseBody = await response.Content.ReadAsStringAsync();
-
-            JObject token = JObject.Parse(responseBody);
-            string accessToken = token["accessToken"].ToString();
-            string refreshToken = token["refreshToken"].ToString();
-            SecureStorage.RemoveAll();
-            await SecureStorage.SetAsync("accessToken", accessToken);
-            await SecureStorage.SetAsync("refreshToken", refreshToken);
-
-            return true;
-        }
-        else
-            return false;
-    }
+    
     private async void ResendVerifyCode(object sender, EventArgs e)
     {
         EmailModel email = new EmailModel { email = emailEntry.Text };
-        await SendVerifyCode(email);
+        await AuthorizationRequests.SendVerifyCode(email);
+        remainingTimeInSeconds = 300;
     }
     private void UpdateTimerLabel()
     {

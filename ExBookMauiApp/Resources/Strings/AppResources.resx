@@ -120,6 +120,9 @@
   <data name="AddBook" xml:space="preserve">
     <value>Add</value>
   </data>
+  <data name="Chat" xml:space="preserve">
+    <value>Chat</value>
+  </data>
   <data name="ConfirmPassword" xml:space="preserve">
     <value>Confirm Password</value>
   </data>
@@ -170,9 +173,6 @@
   </data>
   <data name="SignUp" xml:space="preserve">
     <value>Sign up</value>
-  </data>
-  <data name="Tabs" xml:space="preserve">
-    <value>Tabs</value>
   </data>
   <data name="WelcomeBack" xml:space="preserve">
     <value>Welcome Back</value>

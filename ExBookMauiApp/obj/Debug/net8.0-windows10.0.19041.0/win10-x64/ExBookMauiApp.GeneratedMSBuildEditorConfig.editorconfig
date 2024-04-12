@@ -36,6 +36,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = ExBookMauiApp.Pages.Author
 build_metadata.AdditionalFiles.TargetPath = Pages\Authorization.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\Authorization.xaml
 
+[C:/Users/GURGEN/source/repos/ExBookMauiApp/ExBookMauiApp/Pages/Chat.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ExBookMauiApp.Pages.Chat.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Chat.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Chat.xaml
+
 [C:/Users/GURGEN/source/repos/ExBookMauiApp/ExBookMauiApp/Pages/Home.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ExBookMauiApp.Pages.Home.xaml
@@ -65,12 +71,6 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ExBookMauiApp.Pages.Settings.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\Settings.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\Settings.xaml
-
-[C:/Users/GURGEN/source/repos/ExBookMauiApp/ExBookMauiApp/Pages/Tabs.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = ExBookMauiApp.Pages.Tabs.xaml
-build_metadata.AdditionalFiles.TargetPath = Pages\Tabs.xaml
-build_metadata.AdditionalFiles.RelativePath = Pages\Tabs.xaml
 
 [C:/Users/GURGEN/source/repos/ExBookMauiApp/ExBookMauiApp/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

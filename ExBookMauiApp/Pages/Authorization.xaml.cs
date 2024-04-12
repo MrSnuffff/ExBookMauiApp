@@ -1,6 +1,5 @@
 using ExBookMauiApp.Models.UserModels;
-using Newtonsoft.Json.Linq;
-using System.Text;
+using ExBookMauiApp.HttpRequests;
 using ExBookMauiApp.Resources.Strings;
 namespace ExBookMauiApp.Pages;
 
@@ -34,42 +33,24 @@ public partial class Authorization : ContentPage
             return;
         }
         LoginModel loginModel = new LoginModel { email = username.Text, passwordHash = passwordHash.Text };
-        bool succsesLogin = await LoginRequest(loginModel);
-        if (succsesLogin)
+        string accessToken, refreshToken;
+        (accessToken, refreshToken) = await  AuthorizationRequests.LoginRequestViaEmail(loginModel);
+         
+        if (accessToken != null || refreshToken != null)
+        {
+            await SecureStorage.Default.SetAsync("accessToken", accessToken);
+            await SecureStorage.Default.SetAsync("refreshToken", refreshToken);
             await Shell.Current.GoToAsync("//pages/Home");
+        }
+            
         else
         {
             ErrorLabel.IsVisible = true;
             ErrorLabel.Text = AppResources.WrongPasswordOrUserName;
         }
     }
-    static async Task<bool> LoginRequest(LoginModel loginModel)
-    {
-        string jsonData = Newtonsoft.Json.JsonConvert.SerializeObject(loginModel);
-        byte[] contentBytes = Encoding.UTF8.GetBytes(jsonData);
-        HttpContent content = new ByteArrayContent(contentBytes);
-        content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-
-        HttpResponseMessage response = await App.httpClient.PostAsync("api/Users/LoginViaEmail", content);
-        if (response.IsSuccessStatusCode)
-        {
-            string responseBody = await response.Content.ReadAsStringAsync();
-
-            JObject token = JObject.Parse(responseBody);
-            string accessToken = token["accessToken"].ToString();
-            string refreshToken = token["refreshToken"].ToString();
-            SecureStorage.RemoveAll();
-            await SecureStorage.SetAsync("accessToken", accessToken);
-            await SecureStorage.SetAsync("refreshToken", refreshToken);
-
-
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
+   
+    
 
     private async void ForgotPassword_Clicked(object sender, TappedEventArgs e)
     {

@@ -24,6 +24,9 @@
     <MauiXaml Update="Pages\Authorization.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Pages\Chat.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Pages\Home.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
@@ -37,9 +40,6 @@
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Pages\Settings.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
-    <MauiXaml Update="Pages\Tabs.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
   </ItemGroup>

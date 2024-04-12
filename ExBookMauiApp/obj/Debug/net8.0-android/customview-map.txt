@@ -30,10 +30,13 @@ com.google.android.material.appbar.MaterialToolbar;C:\Users\GURGEN\source\repos\
 com.google.android.material.tabs.TabLayout;C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\obj\Debug\net8.0-android\lp\153\jl\res\layout\tabbar.xml
 declare-styleable;C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\obj\Debug\net8.0-android\lp\153\jl\res\values\attrs.xml
 declare-styleable;C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\obj\Debug\net8.0-android\lp\156\jl\res\values\attr.xml
+exclude;obj\Debug\net8.0-android\res\xml\auto_backup_rules.xml
 external-cache-path;C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\obj\Debug\net8.0-android\lp\157\jl\res\xml\microsoft_maui_essentials_fileprovider_file_paths.xml
 external-path;C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\obj\Debug\net8.0-android\lp\157\jl\res\xml\microsoft_maui_essentials_fileprovider_file_paths.xml
 foreground;obj\Debug\net8.0-android\resizetizer\r\mipmap-anydpi-v26\appicon.xml
 foreground;obj\Debug\net8.0-android\resizetizer\r\mipmap-anydpi-v26\appicon_round.xml
+full-backup-content;obj\Debug\net8.0-android\res\xml\auto_backup_rules.xml
+include;obj\Debug\net8.0-android\res\xml\auto_backup_rules.xml
 item;C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\obj\Debug\net8.0-android\lp\153\jl\res\values\styles.xml
 item;C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\obj\Debug\net8.0-android\lp\156\jl\res\drawable\maui_splash.xml
 item;C:\Users\GURGEN\source\repos\ExBookMauiApp\ExBookMauiApp\obj\Debug\net8.0-android\lp\156\jl\res\values\styles.xml
