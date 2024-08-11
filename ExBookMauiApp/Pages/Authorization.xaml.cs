@@ -9,7 +9,6 @@ public partial class Authorization : ContentPage
 	{
 		InitializeComponent(); 
 
-
     }
 
     private async void CreateAnAccount_Clicked(object sender, EventArgs e)
@@ -20,25 +19,27 @@ public partial class Authorization : ContentPage
    
     private async void SignIn_Clicked(object sender, EventArgs e)
     {
-        if (string.IsNullOrEmpty(username.Text))
+        if (string.IsNullOrEmpty(username.Text.Trim()))
         {
             username.Placeholder = "Username is required";
             username.PlaceholderColor = Colors.Red;
             return;
         }
-        if (string.IsNullOrEmpty(passwordHash.Text))
+        if (string.IsNullOrEmpty(passwordHash.Text.Trim()))
         {
             passwordHash.Placeholder = "Password is required";
             passwordHash.PlaceholderColor = Colors.Red;
             return;
         }
-        LoginModel loginModel = new LoginModel { email = username.Text, passwordHash = passwordHash.Text };
-        string accessToken, refreshToken;
-        (accessToken, refreshToken) = await  AuthorizationRequests.LoginRequestViaEmail(loginModel);
+        LoginModel loginModel = new LoginModel { email = username.Text.Trim(), passwordHash = passwordHash.Text.Trim() };
+        
+        var (accessToken, refreshToken) = await  AuthorizationRequests.LoginRequestViaEmail(loginModel);
          
         if (accessToken != null || refreshToken != null)
         {
             await SecureStorage.Default.SetAsync("accessToken", accessToken);
+
+            string CheckaccessToken = await SecureStorage.Default.GetAsync("accessToken");
             await SecureStorage.Default.SetAsync("refreshToken", refreshToken);
             await Shell.Current.GoToAsync("//pages/Home");
         }

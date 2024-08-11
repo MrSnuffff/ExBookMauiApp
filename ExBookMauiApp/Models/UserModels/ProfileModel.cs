@@ -14,6 +14,6 @@
 
         public int? coins { get; set; } = null!;
 
-        public byte[] photo { get; set; } = null!;
+        public string photo_url { get; set; }
     }
 }

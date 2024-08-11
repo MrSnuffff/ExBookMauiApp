@@ -40,6 +40,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = ExBookMauiApp.Pages.Author
 build_metadata.AdditionalFiles.TargetPath = Pages\Authorization.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\Authorization.xaml
 
+[C:/Users/GURGEN/source/repos/ExBookMauiApp/ExBookMauiApp/Pages/BookDetailPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ExBookMauiApp.Pages.BookDetailPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\BookDetailPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\BookDetailPage.xaml
+
 [C:/Users/GURGEN/source/repos/ExBookMauiApp/ExBookMauiApp/Pages/Chat.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ExBookMauiApp.Pages.Chat.xaml

@@ -8,6 +8,8 @@ namespace ExBookMauiApp.Models
 
         public string author_name { get; set; }
 
+        public virtual ICollection<Book>? books { get; set; }
+
     }
 
 }

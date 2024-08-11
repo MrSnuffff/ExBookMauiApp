@@ -2,7 +2,30 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ExBookMauiApp.Pages.Profile"
-             Title="Profile">
+             Title="Profile"
+             BackgroundColor="White">
+    
+    <ContentPage.ToolbarItems >
+        
+        <ToolbarItem 
+            Priority="1"
+            Order="Secondary"
+            Text ="Select photo"
+            Clicked="SelectPhoto"/>
+        <ToolbarItem 
+            Priority="1"
+            Order="Secondary"
+            Text ="Take a photo"
+            Clicked="TakePhoto"/>
+        <ToolbarItem 
+            Priority="1"
+            Order="Secondary"
+            Text ="Setting"/>
+        <ToolbarItem 
+            Priority="1"
+            Order="Secondary"
+            Text ="About"/>
+    </ContentPage.ToolbarItems>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -12,121 +35,34 @@
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <StackLayout  Orientation="Horizontal" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="Start" VerticalOptions="Start">
-            <Frame Margin="15" CornerRadius="55" Padding="0" BorderColor="Black" HasShadow="False" WidthRequest="110" HeightRequest="110">
-                <Image x:Name="photo" Source="{Binding image}" Aspect="AspectFill" />
+        <StackLayout  Orientation="Horizontal" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="Start" VerticalOptions="Start" >
+            <Frame Margin="25, 0, 15, 30" CornerRadius="55" Padding="0" BorderColor="Black" HasShadow="False" WidthRequest="110" HeightRequest="110">
+                
+                <Image x:Name="ProfilePhoto" Aspect="AspectFill" />
+                
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnFrameTapped" />
+                </Frame.GestureRecognizers>
             </Frame>
             <StackLayout Orientation="Vertical">
-                <Label x:Name="username"  Margin="0,25,5,5" TextColor="Black" FontSize="20" Text="Gurgen Baghdasaryan"/>
+                <Label x:Name="username"  Margin="0,10,0,5" TextColor="Black" FontSize="20" />
                 <StackLayout Orientation="Horizontal">
                     <Image Source="coin.png" WidthRequest="30" HeightRequest="30" />
-                    <Label TextColor="Gray" FontSize="18" Text=" Coins: " />
-                    <Label x:Name="coin" TextColor="Gray" FontSize="18"  />
+                    <Label TextColor="black" FontSize="18" Text=" Coins: " />
+                    <Label x:Name="coin" TextColor="Gray" FontSize="18" Text="0" />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
                     <Image Source="book.png" WidthRequest="30" HeightRequest="30" />
-                    <Label TextColor="Gray" FontSize="18" Text=" Books: " />
+                    <Label TextColor="Black" FontSize="18" Text=" Books: " />
                     <Label x:Name="book_count" TextColor="Gray" FontSize="18" />
                 </StackLayout>
             </StackLayout>
         </StackLayout>
-
-        <ScrollView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
-            <StackLayout>
-                <Frame BackgroundColor="Azure" Margin="15,10,15,15" CornerRadius="20">
-                    <StackLayout Orientation="Horizontal">
-                        <Image Source="bussinesssecrets.jfif" WidthRequest="60" HeightRequest="60" Aspect="AspectFill" />
-                        <StackLayout Orientation="Vertical">
-                            <StackLayout Orientation="Horizontal">
-                                <Label TextColor="Gray" FontSize="18" Text="  Name: " />
-                                <Label TextColor="Gray" FontSize="18" Text="101 բիզնես գաղտնիք" />
-                            </StackLayout>
-                            <StackLayout Orientation="Horizontal">
-                                <Label TextColor="Gray" FontSize="18" Text="  Author: " />
-                                <Label TextColor="Gray" FontSize="18" Text="Վահագն Դիլբարյան" />
-                            </StackLayout>
-                        </StackLayout>
-                    </StackLayout>
-                </Frame>
-
-                <Frame BackgroundColor="Azure" Margin="15,0,15,15" CornerRadius="20">
-                    <StackLayout Orientation="Horizontal">
-                        <Image Source="richdadpoordad.jpg" WidthRequest="60" HeightRequest="60" Aspect="AspectFill" />
-                        <StackLayout Orientation="Vertical">
-                            <StackLayout Orientation="Horizontal">
-                                <Label TextColor="Gray" FontSize="18" Text="  Name: " />
-                                <Label TextColor="Gray" FontSize="18" Text="Rich dad poor dad" />
-                            </StackLayout>
-                            <StackLayout Orientation="Horizontal">
-                                <Label TextColor="Gray" FontSize="18" Text="  Author: " />
-                                <Label TextColor="Gray" FontSize="18" Text="Robert Kiosaki" />
-                            </StackLayout>
-                        </StackLayout>
-                    </StackLayout>
-                </Frame>
+        
+        <Label  Grid.Row="0" Margin="30,0,0,0" TextColor="black" FontSize="18" Text="Books" VerticalOptions="End" FontAttributes="Bold"/>
+        <ScrollView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="#FFFFF1">
+            <StackLayout x:Name="Books">
                 
-                <Frame BackgroundColor="Azure" Margin="15, 0, 15, 15" CornerRadius="20" >
-                    <StackLayout Orientation="Horizontal">
-                        <Image Source="grokaemalgoritmi.jpg" WidthRequest="60" HeightRequest="60" Aspect="AspectFill"></Image>
-                        <StackLayout Orientation="Vertical">
-                            <StackLayout Orientation="Horizontal">
-                                <Label TextColor ="Gray" FontSize="18" Text="  Name: "></Label>
-                                <Label TextColor ="Gray" FontSize="18" Text="Грокаем алгоримы"></Label>
-                            </StackLayout>
-                            <StackLayout Orientation="Horizontal">
-                                <Label TextColor ="Gray" FontSize="18" Text="  Author: "></Label>
-                                <Label TextColor ="Gray" FontSize="18" Text="Адитья Бхаргава"></Label>
-                            </StackLayout>
-                        </StackLayout>
-                    </StackLayout>
-                </Frame>
-                <Frame BackgroundColor="Azure" Margin="15, 0, 15, 15" CornerRadius="20" >
-                    <StackLayout Orientation="Horizontal">
-                        <Image Source="grokaemalgoritmi.jpg" WidthRequest="60" HeightRequest="60" Aspect="AspectFill"></Image>
-                        <StackLayout Orientation="Vertical">
-                            <StackLayout Orientation="Horizontal">
-                                <Label TextColor ="Gray" FontSize="18" Text="  Name: "></Label>
-                                <Label TextColor ="Gray" FontSize="18" Text="Грокаем алгоримы"></Label>
-                            </StackLayout>
-                            <StackLayout Orientation="Horizontal">
-                                <Label TextColor ="Gray" FontSize="18" Text="  Author: "></Label>
-                                <Label TextColor ="Gray" FontSize="18" Text="Адитья Бхаргава"></Label>
-                            </StackLayout>
-                        </StackLayout>
-                    </StackLayout>
-                </Frame>
-                <Frame BackgroundColor="Azure" Margin="15, 0, 15, 15" CornerRadius="20" >
-                    <StackLayout Orientation="Horizontal">
-                        <Image Source="grokaemalgoritmi.jpg" WidthRequest="60" HeightRequest="60" Aspect="AspectFill"></Image>
-                        <StackLayout Orientation="Vertical">
-                            <StackLayout Orientation="Horizontal">
-                                <Label TextColor ="Gray" FontSize="18" Text="  Name: "></Label>
-                                <Label TextColor ="Gray" FontSize="18" Text="Грокаем алгоримы"></Label>
-                            </StackLayout>
-                            <StackLayout Orientation="Horizontal">
-                                <Label TextColor ="Gray" FontSize="18" Text="  Author: "></Label>
-                                <Label TextColor ="Gray" FontSize="18" Text="Адитья Бхаргава"></Label>
-                            </StackLayout>
-                        </StackLayout>
-                    </StackLayout>
-                </Frame>
-                
-                <Frame BackgroundColor="Azure" Margin="15, 0, 15, 15" CornerRadius="20" >
-                    <StackLayout Orientation="Horizontal">
-                        <Image Source="grokaemalgoritmi.jpg" WidthRequest="60" HeightRequest="60" Aspect="AspectFill"></Image>
-                        <StackLayout Orientation="Vertical">
-                            <StackLayout Orientation="Horizontal">
-                                <Label TextColor ="Gray" FontSize="18" Text="  Name: "></Label>
-                                <Label TextColor ="Gray" FontSize="18" Text="Грокаем алгоримы"></Label>
-                            </StackLayout>
-                            <StackLayout Orientation="Horizontal">
-                                <Label TextColor ="Gray" FontSize="18" Text="  Author: "></Label>
-                                <Label TextColor ="Gray" FontSize="18" Text="Адитья Бхаргава"></Label>
-                            </StackLayout>
-                        </StackLayout>
-                    </StackLayout>
-                </Frame>
-
             </StackLayout>
         </ScrollView>
     </Grid>

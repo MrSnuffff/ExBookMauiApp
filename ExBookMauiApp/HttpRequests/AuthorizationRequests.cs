@@ -84,8 +84,9 @@ namespace ExBookMauiApp.HttpRequests
             else
                 return (null, null);
         }
-        public static async Task<string> RefreshToken(string refreshToken)
+        public static async Task<string> RefreshToken()
         {
+            string refreshToken = await SecureStorage.Default.GetAsync("refreshToken");
             HttpResponseMessage response = await App.httpClient.PostAsync($"api/Authentication/RefreshToken?refreshToken={refreshToken}", null);
 
             if (response.IsSuccessStatusCode)

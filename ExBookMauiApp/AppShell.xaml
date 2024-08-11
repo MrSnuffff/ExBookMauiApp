@@ -9,8 +9,15 @@
     TitleColor="Black"
     DisabledColor="Gray"
     UnselectedColor="#95FFFFFF"
-    ForegroundColor="Black" 
     xmlns:strings="clr-namespace:ExBookMauiApp.Resources.Strings">
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style TargetType="TabBar">
+                <Setter Property="Shell.TabBarForegroundColor" Value="#F59930" />
+                <Setter Property="Shell.TabBarTitleColor" Value="#F59930" />
+            </Style>
+        </ResourceDictionary>
+    </Shell.Resources>
 
     <TabBar Route="pages">
         <ShellContent Title="{x:Static strings:AppResources.Home}" Icon="home.png" ContentTemplate="{DataTemplate localPages:Home}" Route="Home"/>
@@ -19,5 +26,5 @@
         <ShellContent Title="{x:Static strings:AppResources.Chat}" Icon="chat.png" ContentTemplate="{DataTemplate localPages:Chat}" Route="Chat"/>
         <ShellContent Title="{x:Static strings:AppResources.Profile}" Icon="profile.png" ContentTemplate="{DataTemplate localPages:Profile}" Route="Profile"/>
     </TabBar>
-   
+
 </Shell>

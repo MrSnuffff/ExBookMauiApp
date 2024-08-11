@@ -1,4 +1,5 @@
 ﻿using Foundation;
+using UIKit;
 
 namespace ExBookMauiApp
 {
@@ -6,5 +7,11 @@ namespace ExBookMauiApp
     public class AppDelegate : MauiUIApplicationDelegate
     {
         protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
+        public override bool FinishedLaunching(UIApplication app, NSDictionary options)
+        {
+            UINavigationBar.Appearance.BarTintColor = UIColor.FromRGB(245, 153, 48);
+            return base.FinishedLaunching(app, options);
+        }
+
     }
 }

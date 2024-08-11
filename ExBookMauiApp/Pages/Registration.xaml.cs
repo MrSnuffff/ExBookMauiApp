@@ -19,7 +19,8 @@ public partial class Registration : ContentPage
     }
     private void UsernameEmailNextButton(object sender, EventArgs e)
     {
-        if(string.IsNullOrEmpty(username.Text))
+        emailEntry.Placeholder = "";
+        if (string.IsNullOrEmpty(username.Text))
         {
             username.Placeholder = "Username is required";
             username.PlaceholderColor = Colors.Red;
@@ -103,12 +104,12 @@ public partial class Registration : ContentPage
             PasswordNextButtonName.IsEnabled = false;
             RegistrationModel registrationModel = new RegistrationModel()
             {
-                username = username.Text,
-                first_name = firstname.Text,
-                last_name = lastname.Text,
-                email = emailEntry.Text,
-                phone_number = phonenumber.Text,
-                passwordHash = password.Text
+                username = username.Text.Trim(),
+                first_name = firstname.Text.Trim(),
+                last_name = lastname.Text.Trim(),
+                email = emailEntry.Text.Trim(),
+                phone_number = phonenumber.Text.Trim(),
+                passwordHash = password.Text.Trim()
             };
 
             bool succsesLogin = await AuthorizationRequests.RegistrationRequestAsync(registrationModel);
@@ -134,7 +135,7 @@ public partial class Registration : ContentPage
     
     public async void ConfirmEmailButton(object sender, EventArgs e)
     {
-        ConfirmEmail confirmEmail = new ConfirmEmail { email = emailEntry.Text, confirmCode = confirmCode.Text };
+        ConfirmEmail confirmEmail = new ConfirmEmail { email = emailEntry.Text.Trim(), confirmCode = confirmCode.Text.Trim() };
         string accessToken, refreshToken;
         (accessToken, refreshToken) = await AuthorizationRequests.CheckVerifyCode(confirmEmail);
         if (accessToken != null && refreshToken != null)
@@ -153,7 +154,7 @@ public partial class Registration : ContentPage
     
     private async void ResendVerifyCode(object sender, EventArgs e)
     {
-        EmailModel email = new EmailModel { email = emailEntry.Text };
+        EmailModel email = new EmailModel { email = emailEntry.Text.Trim() };
         await AuthorizationRequests.SendVerifyCode(email);
         remainingTimeInSeconds = 300;
     }
